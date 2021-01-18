@@ -1,23 +1,11 @@
 # Zasilkovna client in PHP using SOAP or REST API
 
-[![Build Status](https://travis-ci.org/Salamek/zasilkovna.svg?branch=master)](https://travis-ci.org/Salamek/zasilkovna)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=D8LQ4XTBLV3C4&lc=CZ&item_number=SalamekZasilkovna&currency_code=EUR)
-
-This library provides SOAP and REST API implementations.
-Additionaly Branch implementation to fetch and store branch data and label implementation to generate labels.
-
 ## Installation
 
-Install salamek/zasilkovna using  [Composer](http://getcomposer.org/)
+Install using [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require salamek/zasilkovna
-```
-
-or if you want master branch code:
-
-```sh
-$ composer require salamek/zasilkovna:dev-master
+$ composer require baraja-core/zasilkovna
 ```
 
 ## Documentation
@@ -27,10 +15,8 @@ See http://www.zasilkovna.cz/popis-api/ for more info
 ## Example code
 
 ```php
-require "vendor/autoload.php";
-
-$api = new Salamek\Zasilkovna\ApiRest($apiPassword, $apiKey);
-// OR Soap implementation $api = new Salamek\Zasilkovna\ApiSoap($apiPassword, $apiKey);
+$api = new Baraja\Zasilkovna\ApiRest($apiPassword, $apiKey);
+// OR Soap implementation $api = new Baraja\Zasilkovna\ApiSoap($apiPassword, $apiKey);
 $branch = new Branch($apiKey, new BranchStorageSqLite()); // There are multiple implementations of IBranchStorage BranchStorageSqLite using SQLite, BranchStorageFile using file in /tmp and BranchStorageMemory using simple variable (SLOW), You can implement your own by implementing IBranchStorage interface
 $label = new Label($api, $branch);
 

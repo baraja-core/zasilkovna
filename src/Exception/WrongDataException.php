@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna\Exception;
+namespace Baraja\Zasilkovna\Exception;
 
 
 final class WrongDataException extends \Exception

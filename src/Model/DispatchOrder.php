@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna\Model;
+namespace Baraja\Zasilkovna\Model;
 
 class DispatchOrder implements IModel
 {

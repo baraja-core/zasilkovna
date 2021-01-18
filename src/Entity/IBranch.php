@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna\Entity;
+namespace Baraja\Zasilkovna\Entity;
 
 
 interface IBranch

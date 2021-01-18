@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna;
+namespace Baraja\Zasilkovna;
 
 
-use Salamek\Zasilkovna\Exception\PacketAttributesFault;
-use Salamek\Zasilkovna\Exception\RestFault;
-use Salamek\Zasilkovna\Model\ClaimAttributes;
-use Salamek\Zasilkovna\Model\IModel;
-use Salamek\Zasilkovna\Model\PacketAttributes;
+use Baraja\Zasilkovna\Exception\PacketAttributesFault;
+use Baraja\Zasilkovna\Exception\RestFault;
+use Baraja\Zasilkovna\Model\ClaimAttributes;
+use Baraja\Zasilkovna\Model\IModel;
+use Baraja\Zasilkovna\Model\PacketAttributes;
 use Spatie\ArrayToXml\ArrayToXml;
 
 final class ApiRest implements IApi

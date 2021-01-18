@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna;
+namespace Baraja\Zasilkovna;
 
 
-use Salamek\Zasilkovna\Exception\WrongDataException;
-use Salamek\Zasilkovna\Model\ClaimAttributes;
-use Salamek\Zasilkovna\Model\PacketAttributes;
+use Baraja\Zasilkovna\Exception\WrongDataException;
+use Baraja\Zasilkovna\Model\ClaimAttributes;
+use Baraja\Zasilkovna\Model\PacketAttributes;
 
 final class ApiSoap implements IApi
 {

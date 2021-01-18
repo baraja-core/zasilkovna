@@ -1,5 +1,5 @@
 {
-	"name": "salamek/zasilkovna",
+	"name": "baraja-core/zasilkovna",
 	"description": "Zasilkovna SOAP and REST client in PHP",
 	"keywords": [
 		"Zasilkovna",
@@ -7,18 +7,18 @@
 		"API",
 		"REST"
 	],
-	"homepage": "https://github.com/salamek/zasilkovna",
+	"homepage": "https://github.com/baraja-core/zasilkovna",
 	"license": [
 		"LGPL-3.0"
 	],
 	"authors": [
 		{
-			"name": "Adam Schubet",
-			"homepage": "https://github.com/Salamek/zasilkovna"
-		},
-		{
 			"name": "Jan Barášek",
 			"homepage": "https://baraja.cz"
+		},
+		{
+			"name": "Adam Schubet",
+			"homepage": "https://github.com/Salamek/zasilkovna"
 		}
 	],
 	"require": {

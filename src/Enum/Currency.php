@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna\Enum;
+namespace Baraja\Zasilkovna\Enum;
 
 final class Currency
 {

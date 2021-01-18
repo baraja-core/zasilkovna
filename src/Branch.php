@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna;
+namespace Baraja\Zasilkovna;
 
 
-use Salamek\Zasilkovna\Entity\IBranch;
-use Salamek\Zasilkovna\Entity\ZasilkovnaBranch;
-use Salamek\Zasilkovna\Model\BranchStorageFile;
-use Salamek\Zasilkovna\Model\IBranchStorage;
+use Baraja\Zasilkovna\Entity\IBranch;
+use Baraja\Zasilkovna\Entity\ZasilkovnaBranch;
+use Baraja\Zasilkovna\Model\BranchStorageFile;
+use Baraja\Zasilkovna\Model\IBranchStorage;
 
 final class Branch
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Salamek\Zasilkovna;
+namespace Baraja\Zasilkovna;
 
 
-use Salamek\Zasilkovna\Enum\LabelDecomposition;
-use Salamek\Zasilkovna\Enum\LabelPosition;
-use Salamek\Zasilkovna\Exception\WrongDataException;
-use Salamek\Zasilkovna\Model\PacketAttributes;
+use Baraja\Zasilkovna\Enum\LabelDecomposition;
+use Baraja\Zasilkovna\Enum\LabelPosition;
+use Baraja\Zasilkovna\Exception\WrongDataException;
+use Baraja\Zasilkovna\Model\PacketAttributes;
 use TCPDF;
 
 final class Label
