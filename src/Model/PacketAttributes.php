@@ -343,7 +343,7 @@ XX, $value);
 			return null;
 		}
 
-		return (string) preg_replace('/^(\d{3})(\d{2})$/', '$1 $2', $this->zip);
+		return (string) preg_replace('/^(\d{3})(\d{2})$/', '$1 $2', (string) $this->zip);
 	}
 
 
