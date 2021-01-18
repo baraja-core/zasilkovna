@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Baraja\Zasilkovna;
 
 
-use DateTimeInterface;
 use Baraja\Zasilkovna\Model\ClaimAttributes;
 use Baraja\Zasilkovna\Model\PacketAttributes;
+use DateTimeInterface;
 
 interface IApi
 {

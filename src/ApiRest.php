@@ -87,7 +87,7 @@ final class ApiRest implements IApi
 	{
 		$return = $this->callApi(__FUNCTION__, ['barcode' => $barcode]);
 		if ($savePath !== null) {
-			file_put_contents($savePath, base64_decode($return));
+			file_put_contents($savePath, base64_decode($return, true));
 		}
 
 		return $return;
@@ -98,7 +98,7 @@ final class ApiRest implements IApi
 	{
 		$return = $this->callApi(__FUNCTION__, ['packetId' => $packetId, 'format' => $format, 'offset' => $offset]);
 		if ($savePath !== null) {
-			file_put_contents($savePath, base64_decode($return));
+			file_put_contents($savePath, base64_decode($return, true));
 		}
 
 		return $return;
