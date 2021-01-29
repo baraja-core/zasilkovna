@@ -17,7 +17,7 @@ final class BranchStorageFile implements IBranchStorage
 
 	public function __construct(?string $filePath = null)
 	{
-		$this->filePath = $filePath ?? sys_get_temp_dir() . '/' . md5(__CLASS__);
+		$this->filePath = $filePath ?? sys_get_temp_dir() . '/' . md5(self::class);
 		if (\is_file($this->filePath)) {
 			$this->branchList = \json_decode(file_get_contents($this->filePath), true);
 		}

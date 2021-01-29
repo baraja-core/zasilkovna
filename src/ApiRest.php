@@ -94,8 +94,12 @@ final class ApiRest implements IApi
 	}
 
 
-	public function packetLabelPdf(int $packetId, string $format = 'A7 on A4', int $offset = 0, ?string $savePath = null): string
-	{
+	public function packetLabelPdf(
+		int $packetId,
+		string $format = 'A7 on A4',
+		int $offset = 0,
+		?string $savePath = null
+	): string {
 		$return = $this->callApi(__FUNCTION__, ['packetId' => $packetId, 'format' => $format, 'offset' => $offset]);
 		if ($savePath !== null) {
 			file_put_contents($savePath, base64_decode($return, true));
@@ -186,8 +190,8 @@ final class ApiRest implements IApi
 
 		$result = $this->xml2Array(
 			$this->post(
-				$this->array2xml($method, $xmlArray)
-			)
+				$this->array2xml($method, $xmlArray),
+			),
 		);
 		$this->processResult($result);
 
@@ -207,7 +211,7 @@ final class ApiRest implements IApi
 			}
 			throw new RestFault(
 				$result['fault'] . ': ' . ($result['string'] ?? 'Unknown error')
-				. (isset($result['detail']) && $result['detail'] ? "\n" . 'Details: ' . json_encode($result['detail']) : '')
+				. (isset($result['detail']) && $result['detail'] ? "\n" . 'Details: ' . json_encode($result['detail']) : ''),
 			);
 		}
 	}

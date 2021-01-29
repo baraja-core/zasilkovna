@@ -24,8 +24,15 @@ final class ClaimAttributes implements IModel
 	private ?bool $sendLabelToEmail;
 
 
-	public function __construct(string $number, float $value, string $currency, ?int $id = null, ?string $email = null, ?string $eshop = null, ?bool $sendLabelToEmail = null)
-	{
+	public function __construct(
+		string $number,
+		float $value,
+		string $currency,
+		?int $id = null,
+		?string $email = null,
+		?string $eshop = null,
+		?bool $sendLabelToEmail = null
+	) {
 		$this->number = $number;
 		$this->value = $value;
 		$this->currency = $currency;

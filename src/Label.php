@@ -166,8 +166,11 @@ final class Label
 	}
 
 
-	public function generateLabelQuarter(TCPDF $pdf, PacketAttributes $packetAttributes, int $position = LabelPosition::TOP_LEFT): TCPDF
-	{
+	public function generateLabelQuarter(
+		TCPDF $pdf,
+		PacketAttributes $packetAttributes,
+		int $position = LabelPosition::TOP_LEFT
+	): TCPDF {
 		if ($position < 1 || $position > 4) {
 			throw new \InvalidArgumentException('Unknown position, because "' . $position . '" given.');
 		}

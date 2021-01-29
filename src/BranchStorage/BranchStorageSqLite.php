@@ -20,7 +20,7 @@ final class BranchStorageSqLite implements IBranchStorage
 	public function __construct(?string $cachePath = null, string $expiration = '-24 hours')
 	{
 		$this->expiration = $expiration;
-		$this->database = new \PDO('sqlite:/' . ($cachePath ?? sys_get_temp_dir() . '/' . md5(__CLASS__) . '.sqlite'));
+		$this->database = new \PDO('sqlite:/' . ($cachePath ?? sys_get_temp_dir() . '/' . md5(self::class) . '.sqlite'));
 		$this->database->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		$this->createTable();
 	}

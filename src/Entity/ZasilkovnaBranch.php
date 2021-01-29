@@ -66,9 +66,9 @@ final class ZasilkovnaBranch implements IBranch
 	 */
 	public function __construct(array $data)
 	{
-		$toString = static function ($data): string {
-			return \is_array($data) ? \implode(', ', $data) : (string) $data;
-		};
+		$toString = static fn ($data): string => \is_array($data)
+			? \implode(', ', $data)
+			: (string) $data;
 		$this->id = (int) $data['id'];
 		$this->name = $data['name'];
 		$this->nameStreet = $data['nameStreet'];
@@ -198,10 +198,10 @@ final class ZasilkovnaBranch implements IBranch
 		static $greatCircleRadius = 6372.795;
 
 		return acos(
-				cos(deg2rad($this->latitude)) * cos(deg2rad($this->longitude)) * cos(deg2rad($latitude)) * cos(deg2rad($longitude))
+			cos(deg2rad($this->latitude)) * cos(deg2rad($this->longitude)) * cos(deg2rad($latitude)) * cos(deg2rad($longitude))
 				+ cos(deg2rad($this->latitude)) * sin(deg2rad($this->longitude)) * cos(deg2rad($latitude)) * sin(deg2rad($longitude))
-				+ sin(deg2rad($this->latitude)) * sin(deg2rad($latitude))
-			) * $greatCircleRadius;
+				+ sin(deg2rad($this->latitude)) * sin(deg2rad($latitude)),
+		) * $greatCircleRadius;
 	}
 
 

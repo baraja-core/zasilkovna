@@ -55,8 +55,30 @@ final class PacketAttributes implements IModel
 	/**
 	 * @param string|int|null $zip
 	 */
-	public function __construct(string $number, string $name, string $surname, float $value, int $addressId, ?int $id = null, ?string $company = null, ?string $email = null, ?string $phone = null, ?string $currency = null, ?float $cod = null, ?float $weight = null, ?string $eshop = null, bool $adultContent = null, ?string $street = null, ?string $houseNumber = null, ?string $city = null, $zip = null, ?int $carrierPickupPoint = null, ?string $carrierService = null, ?DispatchOrder $dispatchOrder = null, ?string $customerBarcode = null)
-	{
+	public function __construct(
+		string $number,
+		string $name,
+		string $surname,
+		float $value,
+		int $addressId,
+		?int $id = null,
+		?string $company = null,
+		?string $email = null,
+		?string $phone = null,
+		?string $currency = null,
+		?float $cod = null,
+		?float $weight = null,
+		?string $eshop = null,
+		bool $adultContent = null,
+		?string $street = null,
+		?string $houseNumber = null,
+		?string $city = null,
+		$zip = null,
+		?int $carrierPickupPoint = null,
+		?string $carrierService = null,
+		?DispatchOrder $dispatchOrder = null,
+		?string $customerBarcode = null
+	) {
 		$this->setNumber($number);
 		$this->setName($name);
 		$this->setSurname($surname);
@@ -188,13 +210,13 @@ final class PacketAttributes implements IModel
 			$alpha = "a-z\x80-\xFF"; // superset of IDN
 
 			return (bool) preg_match(<<<XX
-		(^
-			("([ !#-[\\]-~]*|\\\\[ -~])+"|$atom+(\\.$atom+)*)  # quoted or unquoted
-			@
-			([0-9$alpha]([-0-9$alpha]{0,61}[0-9$alpha])?\\.)+  # domain - RFC 1034
-			[$alpha]([-0-9$alpha]{0,17}[$alpha])?              # top domain
-		$)Dix
-XX, $value);
+						(^
+							("([ !#-[\\]-~]*|\\\\[ -~])+"|$atom+(\\.$atom+)*)  # quoted or unquoted
+							@
+							([0-9$alpha]([-0-9$alpha]{0,61}[0-9$alpha])?\\.)+  # domain - RFC 1034
+							[$alpha]([-0-9$alpha]{0,17}[$alpha])?              # top domain
+						$)Dix
+				XX, $value);
 		};
 
 		if ($isEmail($email) === false) {

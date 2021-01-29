@@ -16,7 +16,7 @@ final class BranchStorageMemory implements IBranchStorage
 
 	public function __construct()
 	{
-		user_error('BranchStorageMemory is extremely slow and SHOULD NOT be used in production!', E_USER_NOTICE);
+		trigger_error('BranchStorageMemory is extremely slow and SHOULD NOT be used in production!', E_USER_NOTICE);
 	}
 
 
