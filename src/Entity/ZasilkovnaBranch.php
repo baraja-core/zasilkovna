@@ -195,7 +195,7 @@ final class ZasilkovnaBranch implements IBranch
 
 	public function getDistanceFrom(float $latitude, float $longitude): float
 	{
-		static $greatCircleRadius = 6372.795;
+		static $greatCircleRadius = 6_372.795;
 
 		return acos(
 			cos(deg2rad($this->latitude)) * cos(deg2rad($this->longitude)) * cos(deg2rad($latitude)) * cos(deg2rad($longitude))

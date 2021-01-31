@@ -376,10 +376,10 @@ final class PacketAttributes implements IModel
 
 			return;
 		}
-		if ($zip < 10000) {
+		if ($zip < 10_000) {
 			throw new \InvalidArgumentException('Zip "' . $zip . '" is too small.');
 		}
-		if ($zip > 99999) {
+		if ($zip > 99_999) {
 			throw new \InvalidArgumentException('Zip "' . $zip . '" is too big.');
 		}
 
