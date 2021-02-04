@@ -17,7 +17,7 @@ final class BranchStorageFile implements IBranchStorage
 
 	public function __construct(?string $filePath = null)
 	{
-		$this->filePath = $filePath ?? sys_get_temp_dir() . '/' . md5(self::class);
+		$this->filePath = $filePath ?? sys_get_temp_dir() . '/' . md5(__FILE__);
 		if (\is_file($this->filePath)) {
 			$this->branchList = \json_decode(file_get_contents($this->filePath), true);
 		}
@@ -61,6 +61,6 @@ final class BranchStorageFile implements IBranchStorage
 
 	public function isStorageValid(): bool
 	{
-		return $this->branchList !== null;
+		return $this->branchList !== null && \time() - filemtime($this->filePath) < 7200;
 	}
 }
