@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Baraja\Zasilkovna\Model;
 
+
 class DispatchOrder implements IModel
 {
 	private mixed $goods;
@@ -42,10 +43,7 @@ class DispatchOrder implements IModel
 	}
 
 
-	/**
-	 * @return mixed[]
-	 */
-	public function toArray(): array
+	public function toArray(): iterable
 	{
 		return get_object_vars($this);
 	}

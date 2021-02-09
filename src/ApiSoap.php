@@ -31,10 +31,9 @@ final class ApiSoap implements IApi
 
 
 	/**
-	 * @return mixed
 	 * @throws WrongDataException
 	 */
-	public function packetAttributesValid(PacketAttributes $attributes)
+	public function packetAttributesValid(PacketAttributes $attributes): mixed
 	{
 		try {
 			return $this->soap->packetAttributesValid($this->apiKey, $attributes);
@@ -44,91 +43,61 @@ final class ApiSoap implements IApi
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetClaimAttributesValid(ClaimAttributes $attributes)
+	public function packetClaimAttributesValid(ClaimAttributes $attributes): mixed
 	{
 		return $this->soap->packetClaimAttributesValid($this->apiKey, $attributes);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function createPacket(PacketAttributes $attributes)
+	public function createPacket(PacketAttributes $attributes): mixed
 	{
 		return $this->soap->createPacket($this->apiKey, $attributes);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function createPacketClaim(ClaimAttributes $attributes)
+	public function createPacketClaim(ClaimAttributes $attributes): mixed
 	{
 		return $this->soap->createPacketClaim($this->apiKey, $attributes);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function createShipment(int $packetId, string $customBarcode)
+	public function createShipment(int $packetId, string $customBarcode): mixed
 	{
 		return $this->soap->createShipment($this->apiKey, $packetId, $customBarcode);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetStatus(int $packetId)
+	public function packetStatus(int $packetId): mixed
 	{
 		return $this->soap->packetStatus($this->apiKey, $packetId);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetTracking(int $packetId)
+	public function packetTracking(int $packetId): mixed
 	{
 		return $this->soap->packetTracking($this->apiKey, $packetId);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetGetStoredUntil(int $packetId)
+	public function packetGetStoredUntil(int $packetId): mixed
 	{
 		return $this->soap->packetGetStoredUntil($this->apiKey, $packetId);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetSetStoredUntil(int $packetId, \DateTimeInterface $date)
+	public function packetSetStoredUntil(int $packetId, \DateTimeInterface $date): mixed
 	{
 		return $this->soap->packetSetStoredUntil($this->apiKey, $packetId, $date);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function barcodePng(string $barcode)
+	public function barcodePng(string $barcode): mixed
 	{
 		return $this->soap->barcodePng($this->apiKey, $barcode);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetLabelPdf(int $packetId, string $format, int $offset)
+	public function packetLabelPdf(int $packetId, string $format, int $offset): mixed
 	{
 		return $this->soap->packetLabelPdf($this->apiKey, $packetId, $format, $offset);
 	}
@@ -136,27 +105,20 @@ final class ApiSoap implements IApi
 
 	/**
 	 * @param int[] $packetIds
-	 * @return mixed
 	 */
-	public function packetsLabelsPdf(array $packetIds, string $format, int $offset)
+	public function packetsLabelsPdf(array $packetIds, string $format, int $offset): mixed
 	{
 		return $this->soap->packetsLabelsPdf($this->apiKey, $packetIds, $format, $offset);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function packetCourierNumber(int $packetId)
+	public function packetCourierNumber(int $packetId): mixed
 	{
 		return $this->soap->packetCourierNumber($this->apiKey, $packetId);
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function senderGetReturnRouting(string $senderLabel)
+	public function senderGetReturnRouting(string $senderLabel): mixed
 	{
 		return $this->soap->senderGetReturnRouting($this->apiKey, $senderLabel);
 	}

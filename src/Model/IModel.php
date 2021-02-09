@@ -7,8 +7,5 @@ namespace Baraja\Zasilkovna\Model;
 
 interface IModel
 {
-	/**
-	 * @return mixed[]
-	 */
-	public function toArray(): array;
+	public function toArray(): iterable;
 }
