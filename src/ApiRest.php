@@ -111,9 +111,8 @@ final class ApiRest implements IApi
 
 	/**
 	 * @param int[] $packetIds
-	 * @return mixed
 	 */
-	public function packetsLabelsPdf(array $packetIds, string $format = 'A7 on A4', int $offset = 0)
+	public function packetsLabelsPdf(array $packetIds, string $format = 'A7 on A4', int $offset = 0): mixed
 	{
 		return $this->callApi(__FUNCTION__, ['packetIds' => $packetIds, 'format' => $format, 'offset' => $offset]);
 	}
@@ -125,10 +124,7 @@ final class ApiRest implements IApi
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function senderGetReturnRouting(string $senderLabel)
+	public function senderGetReturnRouting(string $senderLabel): mixed
 	{
 		return $this->callApi(__FUNCTION__, ['senderLabel' => $senderLabel]);
 	}
@@ -169,11 +165,10 @@ final class ApiRest implements IApi
 
 
 	/**
-	 * @param IModel|array|mixed $object
 	 * @return mixed[]|string|null
 	 * @throws RestFault
 	 */
-	private function callApi(string $method, $object)
+	private function callApi(string $method, IModel|iterable $object): array|string|null
 	{
 		$xmlArray = [
 			'apiPassword' => $this->apiKey,

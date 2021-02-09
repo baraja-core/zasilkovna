@@ -6,55 +6,37 @@ namespace Baraja\Zasilkovna\Model;
 
 class DispatchOrder implements IModel
 {
-	/** @var mixed */
-	private $goods;
+	private mixed $goods;
 
-	/** @var mixed */
-	private $pdf;
+	private mixed $pdf;
 
 
-	/**
-	 * @param mixed $goods
-	 * @param mixed $pdf
-	 */
-	public function __construct($goods, $pdf)
+	public function __construct(mixed $goods, mixed $pdf)
 	{
 		$this->goods = $goods;
 		$this->pdf = $pdf;
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function getGoods()
+	public function getGoods(): mixed
 	{
 		return $this->goods;
 	}
 
 
-	/**
-	 * @param mixed $goods
-	 */
-	public function setGoods($goods): void
+	public function setGoods(mixed $goods): void
 	{
 		$this->goods = $goods;
 	}
 
 
-	/**
-	 * @return mixed
-	 */
-	public function getPdf()
+	public function getPdf(): mixed
 	{
 		return $this->pdf;
 	}
 
 
-	/**
-	 * @param mixed $pdf
-	 */
-	public function setPdf($pdf): void
+	public function setPdf(mixed $pdf): void
 	{
 		$this->pdf = $pdf;
 	}

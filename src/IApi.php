@@ -11,74 +11,34 @@ use DateTimeInterface;
 
 interface IApi
 {
-	/**
-	 * @return mixed
-	 */
-	public function packetAttributesValid(PacketAttributes $attributes);
+	public function packetAttributesValid(PacketAttributes $attributes): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetClaimAttributesValid(ClaimAttributes $attributes);
+	public function packetClaimAttributesValid(ClaimAttributes $attributes): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function createPacket(PacketAttributes $attributes);
+	public function createPacket(PacketAttributes $attributes): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function createPacketClaim(ClaimAttributes $attributes);
+	public function createPacketClaim(ClaimAttributes $attributes): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function createShipment(int $packetId, string $customBarcode);
+	public function createShipment(int $packetId, string $customBarcode): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetStatus(int $packetId);
+	public function packetStatus(int $packetId): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetTracking(int $packetId);
+	public function packetTracking(int $packetId): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetGetStoredUntil(int $packetId);
+	public function packetGetStoredUntil(int $packetId): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetSetStoredUntil(int $packetId, DateTimeInterface $date);
+	public function packetSetStoredUntil(int $packetId, DateTimeInterface $date): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function barcodePng(string $barcode);
+	public function barcodePng(string $barcode): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetLabelPdf(int $packetId, string $format, int $offset);
+	public function packetLabelPdf(int $packetId, string $format, int $offset): mixed;
 
 	/**
 	 * @param int[] $packetIds
-	 * @return mixed
 	 */
-	public function packetsLabelsPdf(array $packetIds, string $format, int $offset);
+	public function packetsLabelsPdf(array $packetIds, string $format, int $offset): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function packetCourierNumber(int $packetId);
+	public function packetCourierNumber(int $packetId): mixed;
 
-	/**
-	 * @return mixed
-	 */
-	public function senderGetReturnRouting(string $senderLabel);
+	public function senderGetReturnRouting(string $senderLabel): mixed;
 }

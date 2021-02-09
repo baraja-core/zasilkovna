@@ -52,9 +52,6 @@ final class PacketAttributes implements IModel
 	private ?string $customerBarcode;
 
 
-	/**
-	 * @param string|int|null $zip
-	 */
 	public function __construct(
 		string $number,
 		string $name,
@@ -73,7 +70,7 @@ final class PacketAttributes implements IModel
 		?string $street = null,
 		?string $houseNumber = null,
 		?string $city = null,
-		$zip = null,
+		string|int|null $zip = null,
 		?int $carrierPickupPoint = null,
 		?string $carrierService = null,
 		?DispatchOrder $dispatchOrder = null,
