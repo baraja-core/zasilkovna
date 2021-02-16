@@ -21,13 +21,17 @@ final class Branch
 	private bool $initialized = false;
 
 
-	public function __construct(string $apiKey, ?IBranchStorage $branchStorage = null)
+	/**
+	 * @param mixed[] $httpArgs
+	 */
+	public function __construct(string $apiKey, ?IBranchStorage $branchStorage = null, array $httpArgs = [])
 	{
 		if (trim($apiKey) === '') {
 			throw new \RuntimeException('API key can not be empty.');
 		}
 		$this->branchStorage = $branchStorage ?? new BranchStorageFile;
-		$this->jsonEndpoint = 'https://www.zasilkovna.cz/api/v3/' . $apiKey . '/branch.json';
+		$this->jsonEndpoint = 'https://www.zasilkovna.cz/api/v3/' . $apiKey . '/branch.json'
+			. (($args = http_build_query($httpArgs)) !== '' ? '?' . $args : '');
 	}
 
 
