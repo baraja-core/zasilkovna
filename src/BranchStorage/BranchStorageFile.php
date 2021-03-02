@@ -61,6 +61,6 @@ final class BranchStorageFile implements IBranchStorage
 
 	public function isStorageValid(): bool
 	{
-		return $this->branchList !== null && \time() - filemtime($this->filePath) < 7200;
+		return $this->branchList !== null && \time() - filemtime($this->filePath) < 7_200;
 	}
 }
