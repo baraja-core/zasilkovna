@@ -70,7 +70,7 @@ final class PacketAttributes implements IModel
 		?string $street = null,
 		?string $houseNumber = null,
 		?string $city = null,
-		string|int|null $zip = null,
+		string|int |null $zip = null,
 		?int $carrierPickupPoint = null,
 		?string $carrierService = null,
 		?DispatchOrder $dispatchOrder = null,
