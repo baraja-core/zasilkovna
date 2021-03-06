@@ -25,7 +25,7 @@ final class BranchOpeningHours
 	 */
 	public function __construct(array $data)
 	{
-		$toString = static fn ($data): string => \is_array($data)
+		$toString = static fn($data): string => \is_array($data)
 			? \implode(', ', $data)
 			: (string) $data;
 		$this->compactShort = $toString($data['compactShort'] ?? '');
