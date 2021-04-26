@@ -175,7 +175,7 @@ final class ApiRest implements IApi
 		];
 
 		if ($object instanceof IModel) {
-			$path = explode('\\', get_class($object));
+			$path = explode('\\', $object::class);
 			$xmlArray[lcfirst(array_pop($path))] = $object->toArray();
 		} elseif (is_array($object)) {
 			$xmlArray += $object;
