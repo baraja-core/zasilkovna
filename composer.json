@@ -24,7 +24,7 @@
 	"require": {
 		"php": "^8.0",
 		"tecnickcom/tcpdf": "^6.3",
-		"spatie/array-to-xml": "^2.15"
+		"spatie/array-to-xml": "^3.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^0.12.74",
