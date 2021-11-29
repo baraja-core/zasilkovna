@@ -47,7 +47,7 @@ final class ZasilkovnaBranch implements IBranch
 
 	private int $maxWeight;
 
-	private string $region;
+	private ?string $region;
 
 	private string $district;
 
@@ -235,7 +235,7 @@ final class ZasilkovnaBranch implements IBranch
 	}
 
 
-	public function getRegion(): string
+	public function getRegion(): ?string
 	{
 		return $this->region;
 	}
